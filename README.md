@@ -59,3 +59,15 @@ study-page/
    ```bash
    git clone https://github.com/<your-username>/<your-repo-name>.git
    cd <your-repo-name>
+
+2. Open index.html in your browser to get started.
+
+    No build tools or server required — it’s all static HTML, CSS, and JavaScript.
+
+## Future Enhancements
+
+Add input page to create and manage custom content directly from the browser.
+
+Save progress and scores to local storage or cloud.
+
+Expand content with more Linux Essentials topics.
