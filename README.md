@@ -36,7 +36,7 @@ It includes interactive **flashcards**, **quizzes**, and a searchable **referenc
 
 ## File Structure
 
-study-page/
+```study-page/
 ├── css/
 │ └── style.css # Styles for all pages
 ├── js/
@@ -48,6 +48,7 @@ study-page/
 ├── flashcards.html # Flashcards page
 ├── quiz.html # Quiz page
 └── reference.html # Reference guide page
+```
 
 
 
