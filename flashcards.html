@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Flashcards</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="flashcards.html">Flashcards</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="reference.html">Reference</a>
+  </nav>
+
+    <div class="flashcard-category">
+        <label for="flashcardCategory">Choose Category:</label>
+        <select id="flashcardCategory"></select>
+    </div>
+
+    <div id="flashcards-container" class="flashcards-container"></div>
+
+
+  <div class="flashcard">
+    <div class="card-inner" id="card">
+      <div class="card-front" id="card-front"></div>
+      <div class="card-back" id="card-back"></div>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="prevCard()">Previous</button>
+    <button onclick="nextCard()">Next</button>
+    <button onclick="randomCard()">Random</button>
+  </div>
+
+  <script src="js/commands.js"></script>
+  <script src="js/flashcards.js"></script>
+</body>
+</html>

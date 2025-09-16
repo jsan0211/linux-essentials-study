@@ -1,0 +1,225 @@
+/* Global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 30px 0;
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+/* Navigation Bar */
+nav {
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background: #3498db;
+  padding: 10px 15px;
+  margin: 0 8px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background: #2980b9;
+}
+
+/* Flashcards */
+.flashcard {
+  width: 400px;
+  height: 220px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.card-front {
+  background: #ffffff;
+  color: #333;
+}
+
+.card-back {
+  background: #2c3e50;
+  color: #ecf0f1;
+  transform: rotateY(180deg);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* Quiz page styles */
+.quiz-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.quiz-question {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quiz-options button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.quiz-options button:hover {
+  background: #2980b9;
+}
+
+/* Correct and incorrect states */
+.quiz-options button.correct {
+  background: #27ae60 !important; /* green */
+  color: white;
+}
+
+.quiz-options button.incorrect {
+  background: #c0392b !important; /* red */
+  color: white;
+}
+
+/* Disabled buttons */
+.quiz-options button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.quiz-feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Next button */
+.quiz-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  display: none; /* hidden until an answer is chosen */
+  margin-top: 15px;
+}
+
+.quiz-button:hover {
+  background: #2980b9;
+}
+
+.quiz-category {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.quiz-category select,
+.quiz-category button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.reference-controls {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.reference-controls input,
+.reference-controls select {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.reference-results {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ref-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

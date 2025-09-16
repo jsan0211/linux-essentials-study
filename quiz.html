@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Quiz</h1>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="flashcards.html">Flashcards</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="reference.html">Reference</a>
+</nav>
+
+<select id="categorySelect">
+  <option value="">All Categories</option>
+  <option value="file">File Management</option>
+  <option value="process">Process Management</option>
+  <option value="permissions">File Permissions</option>
+  <option value="special">Special Permissions</option>
+  <option value="networking">Networking</option>
+  <option value="package">Package Management</option>
+  <option value="user">User & Group Management</option>
+  <option value="system">System Configuration</option>
+  <option value="shell">Shell Environment</option>
+  <option value="boot">Boot & Services</option> <!-- NEW -->
+</select>
+
+
+
+<div id="quiz-container" class="quiz-container">
+  <div id="question" class="quiz-question"></div>
+  <div id="options" class="quiz-options"></div>
+  <div id="feedback" class="quiz-feedback"></div>
+  <button id="nextBtn" class="quiz-button" onclick="nextQuestion()">Next</button>
+</div>
+
+  <script src="js/commands.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
